@@ -1,301 +1,145 @@
 *{
- margin: 0px;
- padding: 0px;
- box-sizing: border-box;
-}
-.grid-father{
-    display: grid;
-    height: 100vh;
-    grid-template-rows: 80px 1fr 60px;
-    grid-template-columns: 70px 1fr;
-    grid-template-areas: 
-    "header header"
-    "main main"
-    "footer footer";
-}
-header{
-grid-area:header;
-}
-main{
-grid-area:main;
-overflow-y: scroll;
-display: grid;
-grid-template-rows: 1fr;
-grid-template-columns: 1fr 1fr;
-grid-template-areas: 
-"photos texts";
-padding: 15px;
-background:lightgoldenrodyellow;
-}
-nav{
-grid-area:nav;
-}
-header a{
-    color: white;
-    font-size: 1.1rem;
-}
-footer{
-grid-area:footer;
-background-image: url("images/addis\ 2.jfif");
-background-position: center;
-background-size: cover;
-}
-.photo img{
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
-     object-position: center;
-     border-radius: 10px;
-     
-}
-.photo{
-    grid-area: photos;
-    display: grid;
-    grid-template-rows: repeat(5,1fr);
-    grid-template-columns: repeat(6,1fr);
-    grid-template-areas: 
-    "photo1 photo1 photo1 photo1 photo1 photo1"
-    "photo1 photo1 photo1 photo1 photo1 photo1"
-    "photo1 photo1 photo1 photo1 photo1 photo1"
-    "photo1 photo1 photo1 photo1 photo1 photo1"
-    "photo1 photo1 photo1 photo1 photo1 photo1";
-    border-radius: 10px;
-    margin-right: 20px;
-    
-    border: 1px solid green;
-
-}
-.first-photo{
-    grid-area:photo1;
-}
-.second-photo{
-    grid-area:photo2;
-}
-
-header{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;}
+.grid-cont{
     background-image: url("images/addis\ 2.jfif");
     background-position: center;
     background-size: cover;
+    height:100vh;
+    overflow-y: auto;
+    display: grid;
+    grid-template-rows: 70px 1fr 500px 1fr;
+    grid-template-columns: 1fr 400px 1fr;
+    grid-template-areas: 
+    "header header header"
+    ". . ."
+    ". main ."
+    ". . .";
+
     
+}
+main{
+    background: rgba(0,0,0,0.7);
+    grid-area: main;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    ". . . "
+    ". img-tag ."
+    ". texts ."
+    ". . . ";
+    row-gap: 20px;
+}
+header{
+    grid-area: header;
+   background: rgba(0,0,0,0.5);
+    
+}
+header a {
+    color: white;
+    text-shadow: 0px 0px 4px black;
+}
+img{
+    grid-area: img-tag;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+.aboutme{
+    grid-area: texts;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.5;
+    height: auto;
+    color: white;
+    text-shadow: 0px 0px 5px black;
+    font-weight: bold;
+   font-size: 1.2rem;
+    font-family: "Dosis", sans-serif;
 }
 .desktop-nav{
     display: flex;
-    background: rgba(0,0,0,0.4);
     justify-content: space-evenly;
-    align-items: center;
-    height: 100%;
+    margin-top: 20px;
+}
+.desktop-nav a{
+    text-decoration: none;
+}
+#bar-1,#bar-2,#bar-3{
+    background: black;
+    width: 25px;
+    height: 5px;
+    border: none;
+    margin-bottom: 1px;
+    
+}
+.nav-class{
+    display: none;
+    }
+
+#hum{
+    background: none;
+    border: none;
+    margin:20px;
+    display: none;
+    cursor: pointer;
+}
+@media(max-width:600px){
+.desktop-nav{
     display: none;
 }
-.text{
-    grid-area: texts;
-    background: lightgreen;
-    padding: 10px;
-    padding-top: 70px;
-    border-radius: 10px;
-    line-height: 1.2;
-    height: 100%;
-    border: 1px solid green;
+#hum{
+    display: block;
 }
-.text p{
-    font-size: 1.1rem;
-    color: black;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-.navexp{
-    grid-template-rows: 80px 1fr 60px;
-    grid-template-columns: 0.5fr 1fr;   
+.nav-expand{
+    display: grid;
+    grid-template-rows: 70px 1fr 500px 1fr;
+    grid-template-columns: 1fr 400px 1fr;    
 }
 .header{
     grid-row-start: 1;
-    grid-row-end:2;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    
+}
+a{
+    color: black;
+    text-decoration: none;
+    
+}
+.nav-class{
+    display: none;
+    }
+.side-nav{
+    grid-row-start: 2;
+    grid-row-end:5;
     grid-column-start: 1;
     grid-column-end: 3;
-}
-.nav{
-    grid-row-start: 2;
-    grid-row-end:4;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    display: flex; 
+    background: rgba(255,255,255,0.5);
+    
+    display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    background: rgba(0,0,0,0.2);
+    margin-left: 15px;
     position: relative;
     z-index: 1;
-}
-nav a{
-    color: white;
-    text-shadow: 0px 0px 3px black;
-    font-size: 1.2rem;
-    text-decoration: none;
-}
-.hid-nav{
-    display: none;
-}
-#bar-1,#bar-2,#bar-3{
-    width: 25px;
-    height: 5px;
-    margin-bottom: 1px;
-    background: black;
-    border: none;
-}
-#hum{
-    margin-left: 20px;
-    margin-top: 10px;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
 
-.main{
-    grid-row-start: 2;
-    grid-row-end:3;
-    grid-column-start: 1;
+}
+.main-class{
+    grid-row-start: 3;
+    grid-row-end:4;
+    grid-column-start: 2;
     grid-column-end: 3;
     position: relative;
     z-index: 0;
-}
-.footer{
-    grid-row-start: 3;
-    grid-row-end:4;
-    grid-column-start: 1;
-    grid-column-end: 3;
-
-}
-
-footer p{
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    align-items: center;
-    font-size: 1.2rem;
-    text-shadow: 0px 0px 7px black;
-}
-@media(min-width:600px){
-    body{
-        background: rgba(211, 211, 211,0.3);
-    }
-    main{
-        width: 600px;
-        margin-left: auto;
-        margin-right: auto;
-        overflow-y: auto;
-        background:rgba(173, 216, 230,0.6);
-        grid-template-rows: 300px;
-        
-        overflow-y:visible;
     
-    }
-    #hum{
-        display: none;
-    }
-    .desktop-nav{
-        display: flex;
-        
-    }
-    .desktop-nav a {
-        text-decoration: none;
-    }
-    .grid-father{
-    grid-template-rows: 80px 135px 1fr 135px 60px;
-    grid-template-columns: 1fr 0.5fr 300px 300px 0.5fr 1fr;
-    grid-template-areas: 
-    "header header header header header header"
-    ". . top1 top2 . ."
-    ". left main main right ."
-    ". . bot1 bot2 . ."
-    "footer footer footer footer footer footer";
-   
-    }
-    .top1{
-        grid-area:top1;
-        width: 270px;
-        height: 100%;
-        background:yellowgreen;
-        border-radius: 150px 150px 0 0;
-        
-        
-    }
-    header{
-        margin-bottom: 20px;
-    }
-    .top2{
-        grid-area:top2;
-        width: 270px;
-        height: 100%;
-        border-radius: 150px 150px 0 0;
-        margin-bottom: 10px;
-    }
-    .bot1{
-        grid-area:bot1;
-        width: 270px;
-        height: 100%;
-        background:yellowgreen;
-        border-radius: 0 0 150px 150px;
-        margin-bottom: 20px;
-    }
-    .bot2{
-        grid-area:bot2;
-        width: 270px;
-        height: 100%;
-        background:yellowgreen;
-        margin-bottom: 20px;
-        border-radius: 0 0 150px 150px;
-  
-    }
-    .left{
-        grid-area:left;
-        background:yellowgreen;
-        
-    }
-    .right{
-        grid-area:right;
-        background:yellowgreen;
-        
-    }
-    .top1,.top2{
-        border-top: 1px  solid red;
-        border-left: 1px  solid red;
-        border-right: 1px  solid red;
-        background-image: url("images/addis\ 2.jfif");
-        background-position: center;
-        background-size: cover;
-        
-    }
-    .bot1,.bot2{
-        border-bottom: 1px  solid red;
-        border-left: 1px  solid red;
-        border-right: 1px  solid red;
-        background-image: url("images/addis\ 2.jfif");
-        background-position: center;
-        background-size: cover;
-        
-    }
-    .left{
-        border-top: 1px  solid red;
-        border-left: 1px  solid red;
-        border-bottom: 1px  solid red;
-        background-image: url("images/addis\ 2.jfif");
-        background-position: center;
-        background-size: auto 100%;
-        border-radius: 10px 0 0 10px;
-    }
-    .right{
-        border-top: 1px  solid red;
-        border-bottom: 1px  solid red;
-        border-right: 1px  solid red;
-        background-image: url("images/addis\ 2.jfif");
-        background-position: center;
-        
-        border-radius: 0 10px 10px 0;
-        background-size: auto 100%; 
-    }
- 
-    footer{
-        margin-top: 20px;
-    }
+}
+
+
 }
