@@ -98,8 +98,8 @@ img{
 }
 .nav-expand{
     display: grid;
-    grid-template-rows: 70px 1fr 500px 1fr;
-    grid-template-columns: 1fr 400px 1fr;    
+    grid-template-rows: 70px 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;    
 }
 .header{
     grid-row-start: 1;
