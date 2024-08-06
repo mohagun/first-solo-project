@@ -1,0 +1,309 @@
+body{      
+color: white;
+margin: 0px;
+width: auto;  
+height: 100vh;  
+    
+}
+.center{
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-style: italic;
+    
+    
+    
+}
+.facts{
+    font-size:30px;
+    font-weight: bolder;
+    border-radius: 4px;
+    text-shadow: 0px 0px 10px white;
+    background: rgba(0, 0, 0,0.4); 
+    
+}
+
+    
+#B:hover,#C:hover,#D:hover,#E:hover,#A:hover{
+    font-size: 20px;
+    font-weight: bolder;
+    text-shadow: 0 0 500px black;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 10px;
+
+    
+}
+
+#pp{
+    display: flex;
+    background-image: url("images/addis\ 2.jfif");
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    padding-left: 15px;
+    padding-bottom: 50px;
+    
+}
+.pages{
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    border-radius:20px;
+    background: rgba(0, 0, 0,0.7);
+    width: 800px;
+    text-shadow: 0px 0px 4px black;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    top:0;
+    margin-left:auto;
+    margin-right:auto;   
+
+    
+}
+#thex{
+    display: none;
+    border:1px solid white;
+    background: white;
+}
+.pages a h3{
+    color: white;
+}
+.fun{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background-image: url("images/addis\ 2.jfif");
+    padding-bottom: 15px;
+    width: auto;
+    
+}
+
+img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    
+}
+#dolist{
+    padding-bottom: 30px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-align: center;
+    background-image: url("images/addis\ 2.jfif");
+}
+#eat:hover{
+    background-image: url("images/eating.gif");
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    background-position: center;
+}
+#eat{
+    background-image: url("images/food.jfif");
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    background-position: center;
+    margin-left: auto;
+    margin-left: auto;
+}
+#coffee{
+    background-image: url("images/buna.jfif");
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    background-position: center;
+    background-size: contain;
+    margin-left: auto;
+    margin-right: auto;
+}
+#coffee:hover{
+    background-image: url("images/pour.gif");
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    object-fit:contain;
+    background-position: center;
+    background-size: contain;
+    
+}
+
+#bake{
+    background-image: url("images/injera.jfif");
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    background-position: center;
+    background-size: contain;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.int{
+    color:white;
+    text-shadow: 0px 0px 5px black;
+    font-size: 30px;
+
+}
+.visit{
+    margin-top: 100px;
+    color:white;
+    text-shadow: 0px 0px 5px black;
+
+}
+
+#A,#B,#C,#D,#E{
+    margin-bottom: 10px;
+    color:white;
+    text-shadow: 0px 0px 4px black;
+    font-family: "Lato", sans-serif;
+    font-size: 20px;
+    text-align: center;
+   
+    
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.pages a h3{
+border-bottom: none;
+}
+#pp button{
+    width: 0px;
+    height: 0px;
+    border: none;
+    background: none;
+}
+#bro{
+    width: 100%;
+    background-image: url(images/addis\ 2.jfif);
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 0px;
+    
+   
+}
+.mmvisit{
+    display: none;
+}
+
+.visits{
+margin-top: 1%;
+
+}
+
+@media(max-width:800px){
+    #pp button{
+        cursor: pointer;
+        position: relative;
+    }
+    #bar-1,#bar-2,#bar-4{
+        width: 30px;
+        height: 5px;
+        background: black;
+        margin: 1.5px;
+        position: relative;
+        bottom:230px ;
+
+    }
+    .pages{
+        display: none;
+        opacity: 0;
+        z-index: 1;
+        transform: translateX(100%);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    #thex{
+        display: none;
+        border:1px solid white;
+        background: white;
+        z-index: 2;
+    }
+    #thex h1{
+        color: white;
+    }
+    #pp{
+        width: 98%;
+       background: url(images/addis\ 3.jfif); 
+        height: 100vh;
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        margin-right: 0px;
+       
+        
+    }
+    #contai{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: auto;
+    }
+    #bro{
+        width: 100%;
+        background-image: url(images/addis\ 2.jfif);
+        height: 100px;
+        background-size: cover;
+        background-position: center;
+        margin-right: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+    }
+    .mmint{
+      display: none;
+    }
+    .mmvisit{
+        display: block;
+        margin-top: 0px;
+        position: absolute;
+        color: black;
+        text-shadow: 0px  0px 3px white;
+        text-align: center;
+        height: auto;
+    }
+    .facts{
+        width: 30%;
+        border: 1px solid beige;
+        height: auto;
+        text-align: center;
+        
+        padding: 10px;        }
+        .center{
+            align-items: start;
+            height: auto;
+            width:auto;
+            position: relative;
+    
+        }
+        #A,#B,#C,#D,#E{
+            font-size: 14px;
+        }
+        .fun{
+            flex-direction: column;
+            align-items: center;
+        }
+        body{
+            margin: 0px;
+        }
+        .visits{
+            display: none;
+        }
+}
+
+
+    
