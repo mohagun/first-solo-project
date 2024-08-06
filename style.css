@@ -215,9 +215,22 @@ margin-top: 1%;
         height: 5px;
         background: black;
         margin: 1.5px;
-        position: relative;
-        bottom:230px ;
-
+        position: fixed;
+    }
+    #bar-1{
+        top:110px;
+        left:25px;
+        
+    }
+    #bar-2{
+        top:117px;
+        left:25px;
+        
+    }
+    #bar-4{
+        top:124px;
+        left:25px;
+        
     }
     .pages{
         display: none;
